@@ -23,10 +23,21 @@ for (var i = 0; i < squares.length; i++) {
     var clickedColor = this.style.background;
     // compare color to pickedColor
     if (clickedColor === pickedColor) {
-      alert("Correct");
+      messageDisplay.textContent = "Correct!";
+      changeColors(clickedColor);
     } else {
       this.style.background = "#232323";
       messageDisplay.textContent = "Try Again";
+
     }
   });
+}
+
+function changeColors(color) {
+  // loop through all squares
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.background = color;
+
+  }
+
 }
