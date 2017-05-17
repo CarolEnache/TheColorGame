@@ -1,4 +1,4 @@
-var numberSquares = 6;
+var numSquares = 6;
 var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
@@ -41,7 +41,7 @@ hardBtn.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
   // generate new colors
-  colors = generateRandomColors(numSquares);
+  colors = generateRandomColors(6);
   // pick a new color from array
   pickedColor = pickColor();
   // change color dispaly to match pickedColor
@@ -50,7 +50,7 @@ resetButton.addEventListener("click", function() {
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
   }
-  h1.style.background = "#232323";
+  h1.style.background = "steelblue";
 });
 
 colorDisplay.textContent = pickedColor;
